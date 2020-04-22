@@ -1,6 +1,9 @@
-- id: export
-  name: Export poetry.lock to requirements.txt
-  language: system
-  entry: poetry export -f requirements.txt -o requirements.txt
+- id: poetry-export
+  name: Poetry requirements.txt exporter
+  description: Runs 'poetry export' to automatically export a 'requirements.txt' file.
+  language: script
+  entry: poetry-export.sh
   files: "^poetry.lock$"
-  pass_filenams: false
+  pass_filenames: false
+
+
