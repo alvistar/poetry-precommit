@@ -1,0 +1,6 @@
+- id: export
+  name: Export poetry.lock to requirements.txt
+  language: system
+  entry: poetry export -f requirements.txt >requirements.txt
+  files: "^poetry.lock$"
+  pass_filenams: falsepoetry
