@@ -5,5 +5,11 @@
   entry: poetry-export.sh
   files: "^poetry.lock$"
   pass_filenames: false
-
-
+- id: poetry-export-remove-editable
+  name: Poetry requirements.txt exporter with SED
+  description: Runs 'poetry export' to automatically export a 'requirements.txt' file
+  language: script
+  entry: poetry-export-sed.sh
+  files: "^poetry.lock$"
+  pass_filenames: false
+  
